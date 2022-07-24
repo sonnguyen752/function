@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiểm tra số nhập vào</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function check(num) {
+        let result='';
+       let output = isNaN(num);
+       if(output) {
+            result = ("ký tự nhập vào không phải số");
+       } else {
+            result = ("ký tự nhập vào là số");
+       }
+       return result;
+    }
+    let input = prompt("nhập ký tự cần kiểm tra");
+    // let result = check(input);
+    alert(check(input))
+</script>

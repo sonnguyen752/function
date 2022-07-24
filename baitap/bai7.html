@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiểm tra 3 số nguyên bất kỳ</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function check(num1, num2, num3) {
+        // debugger;
+        let min = num1;
+        if (num2 < min && num2 < num3 ){
+            min = num2;
+        } else if (num3 < min && num3 < num2) {
+            min = num3;
+        }
+       return min;
+    } 
+    let number1 = +prompt("nhạp số thư nhất");
+    let number2 = +prompt("nhạp số thư hai");
+    let number3 = +prompt("nhạp số thư ba");
+    alert(check(number1, number2, number3));
+</script>
