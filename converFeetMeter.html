@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyen doi feet sang met</title>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <td><input type="number" id="input1" ></td>
+            <td><select name="" id="option1">
+                <option value="meter">Meter</option>
+                <option value="feet">Feet</option>
+            </select></td>
+            <td id="result">ket qua</td>
+            <td><select name="" id="option2">
+                <option value="meter" >Meter</option>
+                <option value="feet" >Feet</option>
+            </select></td>
+           
+        </tr>
+    </table> -->
+    <!-- <p id="result">..........</p> -->
+
+<form>
+    <p><b>Doi tu feet sang met: </b><br>
+        <label>feet</label>
+        <input id="inputFeet" type="number" placeholder="Feet"
+               oninput="feetConverter(this.value)"
+               >
+    </p>
+    <p>Met: <span id="outputMet"></span></p>
+</form>
+<form>
+    <p><b>Doi tu met sang feet: </b><br>
+        <label>met</label>
+        <input id="inputMet" type="number" placeholder="Met"
+               oninput="metConverter(this.value)"
+               >
+    </p>
+    <p>Feet: <span id="outputFeet"></span></p>
+</form>
+</body>
+</html>
+<script>
+function feetConverter(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputMet").innerHTML = valNum * 3.279 +" (met)";
+}
+function metConverter(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputFeet").innerHTML = valNum * 0.305 +" (feet)";
+}
+
+</script>
