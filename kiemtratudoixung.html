@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiểm tra từ đối xứng</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+function reverse_(n){ 
+  // n = n.toString()
+  let m = n.split("");
+  return m.reverse().join("");
+}
+function symmetrical_(n){ 
+    let flag =0;
+    if (reverse_(n) == n) flag = 1;
+    return flag;
+}
+let n = prompt(" nhập chuỗi");
+let check = symmetrical_(n);
+if( check == 1 ) alert(n + " la chuỗi doi xung");
+else alert(n + " khong phai la la chuỗi doi xung");
+</script>
