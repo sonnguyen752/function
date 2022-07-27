@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quản lý sản phẩm</title>
+</head>
+<body>
+    <h3>Danh sách sản phẩm</h3>
+    <p id="list"></p>
+    <form >
+        <input type="button" value="Thêm" id="add" onclick="them(sanpham)">
+        <input type="button" value="Xóa" id="delete"onclick="del(sanpham)">
+        <input type="button" value="Sửa" id="edit"onclick="sua(sanpham)">
+        <!-- <input type="text" id="input"> -->
+    </form>
+</body>
+</html>
+<script>
+    let sanpham = ["ô tô", "tàu điện", "xe hơi"];
+    
+    function display(sanpham) {
+        let list="";
+        for (let i = 0; i< sanpham.length; i++) {
+            list += i + 1 +": "+sanpham[i] + "<br>";
+        }
+        return list;
+    }
+    // document.write(display());
+    function them(sanpham) {
+        let newsanpham = prompt("nhập sản phẩm cần thêm");
+        sanpham.push(newsanpham);
+            document.getElementById("list").innerHTML = display(sanpham);
+        // return sanpham;
+    }
+    function del(sanpham) {
+        let index = prompt("Nhập số thứ tự muốn xóa");
+        sanpham.splice(index,1);
+        // return sanpham;
+         document.getElementById("list").innerHTML = display(sanpham);
+    }
+    
+    function sua(sanpham) {
+        let index = prompt("nhập số thứ tự muốn sửa sản phẩm");
+        let newSanPham = prompt("nhập mặt hàng mới");
+        sanpham[index-1] = newSanPham;
+        // return sanpham;
+        document.getElementById("list").innerHTML = display(sanpham);
+    }
+    document.getElementById("list").innerHTML = display(sanpham);
+</script>
